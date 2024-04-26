@@ -1,0 +1,101 @@
+#blog{
+    padding-top: 50px;
+    .blog-container {
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 0 15px;
+        display: flex;
+        .sidebar{
+            width: 25%;
+            div{
+                &:nth-child(1){
+                    margin-bottom: 30px;
+                }
+            }
+            h2 {
+                font-size: 18px;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                li{
+                    margin: 15px 0;
+                    a{
+                        text-decoration: none;
+                        color: #888;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+            form{
+                position: relative;
+                input{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 10px 15px;
+                    border: 1px solid rgb(241, 241, 241);
+                    background-color: rgb(241, 241, 241);
+                }
+                button{
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    position: absolute;
+                    background-color: rgb(9, 9, 9);
+                    border: none;
+                    color: white;
+                }
+            }
+        }
+        .card-container{
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            .blog-card{
+                padding: 15px;
+                box-sizing: border-box;
+                flex-basis: 50%;
+                flex-shrink: 0;
+                .img-container{
+                    img{
+                        width: 100%;
+                    }
+                }
+                h2{
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                span {
+                    font-style: italic;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                p{
+                    color: #888;
+                    font-weight: 300;
+                }
+                a {
+                    color: black;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #blog{
+        .blog-container {
+            .sidebar{
+                display: none;
+            }
+            .card-container{
+                width: 100%;
+                .blog-card{
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+}

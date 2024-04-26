@@ -1,0 +1,30 @@
+#details {
+    padding: 70px 0;
+    .details-container{
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        .img-container{
+            padding: 20px;
+            width: 33.33%;
+            img{
+                width: 100%;
+            }
+        }
+        .text-container{
+            width: 50%;
+            .buttons {
+                span, button{
+                    padding: 10px 20px;
+                }
+                button {
+                    background-color: black;
+                    color: white;
+                    border:none;
+                }
+            }
+        }
+    }
+    
+}
