@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import slugify from 'slugify'
+import { useCart } from 'react-use-cart'
 
 function ShopCard({ alldata }) {
+  const {addItem} = useCart() 
+
   return (
     <div className='shop-card'>
       <div className="img-container">
@@ -11,6 +14,7 @@ function ShopCard({ alldata }) {
         <div className='read-more'>
           <button><Link to={`/details/${slugify(alldata.title)}`}>READ MORE</Link></button>
         </div>
+        <button onClick={()=>{addItem(alldata)}}>Add to Cart</button>
       </div>
       <div>
         <h4>{alldata.title}</h4>

@@ -2,11 +2,14 @@ import React from 'react'
 import ShopCard from '../components/ShopCard'
 import { useContext } from 'react'
 import { ProductContext } from '../context/ProductContext'
+import { useCart } from 'react-use-cart'
 
 function Shop() {
 
+  const { addItem } = useCart()
+
   const [product] = useContext(ProductContext)
-  
+
   return (
     <section id='shop'>
       <div className="shop-container">

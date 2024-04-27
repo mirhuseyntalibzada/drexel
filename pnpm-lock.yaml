@@ -17,6 +17,9 @@ dependencies:
   react-router-dom:
     specifier: ^6.22.3
     version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
+  react-use-cart:
+    specifier: ^1.13.0
+    version: 1.13.0(react@18.2.0)
   sass:
     specifier: ^1.75.0
     version: 1.75.0
@@ -2256,6 +2259,15 @@ packages:
       react: '>=16.8'
     dependencies:
       '@remix-run/router': 1.15.3
+      react: 18.2.0
+    dev: false
+
+  /react-use-cart@1.13.0(react@18.2.0):
+    resolution: {integrity: sha512-V3jrNOgBXxTn/RWh1HCEdrQk/jx2xCixdkX1c7Vyl4zxEf9jOuniUnjZSTALO7rQ5226onqmvXxKz1eu0Yz6Iw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
       react: 18.2.0
     dev: false
 
