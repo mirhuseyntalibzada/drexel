@@ -1,0 +1,152 @@
+#shop {
+    padding: 50px 15px 0;
+
+    .shop-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+
+        .sidebar {
+            width: 25%;
+            display: none;
+
+            div {
+                &:nth-child(2) {
+                    margin-top: 30px;
+
+                    h2 {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+
+                li {
+                    margin: 15px 0;
+
+                    a {
+                        text-decoration: none;
+                        color: #888;
+                        font-weight: 300;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .shop-card-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .shop-card {
+                position: relative;
+                padding: 10px;
+                box-sizing: border-box;
+                width: 100%;
+                text-align: center;
+
+
+
+                .img-container {
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .img-2 {
+                        top: 0;
+                        left: 0;
+                        position: absolute;
+                        opacity: 0;
+                        z-index: 10;
+                        transition: .2s;
+                    }
+
+                    .img-2:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .btn-container {
+                    padding: 10px 0;
+                    background-color: white;
+                    opacity: 0;
+                    z-index: 10;
+                    position: absolute;
+                    top: 60%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: .2s;
+
+                    button {
+                        cursor: pointer;
+                        color: black;
+                        padding: 15px 20px;
+                        border: none;
+                        background-color: transparent;
+                        a {
+                            color: black;
+                        }
+                    }
+
+                    button:hover {
+                        color: gray;
+                        a {
+                            color: grey;
+                        }
+                    }
+                }
+
+                .img-container:hover .btn-container {
+                    opacity: 1;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    #shop {
+        .shop-container {
+
+            .shop-card-container {
+                .shop-card {
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #shop {
+        .shop-container {
+
+            .shop-card-container {
+                .shop-card {
+                    flex-basis: 33.333%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    #shop {
+        .shop-container {
+            .sidebar {
+                display: block;
+            }
+
+            .shop-card-container {
+                width: 75%;
+            }
+        }
+    }
+}
