@@ -4,13 +4,14 @@ import App from './App.jsx'
 import './scss/style.scss'
 import { ProductProvider } from './context/ProductContext.jsx'
 import { CartProvider } from 'react-use-cart'
+import { LanguageProvider } from './context/LanguageContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <CartProvider>
+  <CartProvider>
+    <LanguageProvider>
       <ProductProvider>
         <App />
       </ProductProvider>
-    </CartProvider>
-  </React.StrictMode>,
+    </LanguageProvider>
+  </CartProvider>
 )

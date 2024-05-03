@@ -3,12 +3,14 @@ import { useContext } from 'react'
 import { ProductContext } from '../context/ProductContext'
 import { useParams } from 'react-router-dom';
 import slugify from "slugify"
+import { useCart } from 'react-use-cart';
 
 function Details() {
 
   const [products] = useContext(ProductContext)
   const { slug } = useParams();
   const productDetails = products.find(p => slugify(p.title) === slug);
+  const { addItem } = useCart()
 
   return (
     <section id='details'>
@@ -23,7 +25,7 @@ function Details() {
              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem quam nemo rem vel ipsum accusantium, laboriosam amet praesentium debitis consectetur quasi, blanditiis, eos facilis culpa iusto quaerat earum placeat molestiae?</p>
              <div className='buttons'>
               <span>${productDetails.price}.00</span>
-              <button>Add to Cart</button>
+              <button onClick={()=>{addItem(productDetails)}}>Add to Cart</button>
              </div>
         </div>
       </div>

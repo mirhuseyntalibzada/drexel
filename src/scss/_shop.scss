@@ -43,10 +43,13 @@
             flex-wrap: wrap;
 
             .shop-card {
+                position: relative;
                 padding: 10px;
                 box-sizing: border-box;
                 width: 100%;
                 text-align: center;
+
+
 
                 .img-container {
                     position: relative;
@@ -67,31 +70,42 @@
                     .img-2:hover {
                         opacity: 1;
                     }
+                }
 
-                    .read-more {
-                        opacity: 0;
-                        z-index: 20;
-                        position: absolute;
-                        top: 0;
-                        left: 10px;
-                        transform: translate(0, 0%);
-                        transition: .2s;
+                .btn-container {
+                    padding: 10px 0;
+                    background-color: white;
+                    opacity: 0;
+                    z-index: 10;
+                    position: absolute;
+                    top: 60%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: .2s;
 
-                        button {
-                            padding: 10px 15px;
-                            background-color: black;
-                            border: none;
-                            a {
-                                color:white;
-                            }
+                    button {
+                        cursor: pointer;
+                        color: black;
+                        padding: 15px 20px;
+                        border: none;
+                        background-color: transparent;
+                        a {
+                            color: black;
+                        }
+                    }
+
+                    button:hover {
+                        color: gray;
+                        a {
+                            color: grey;
                         }
                     }
                 }
-            }
 
-            .shop-card:hover .read-more {
-                opacity: 1;
-                top: 10px;
+                .img-container:hover .btn-container {
+                    opacity: 1;
+                    top: 50%;
+                }
             }
         }
     }

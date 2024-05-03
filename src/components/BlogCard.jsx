@@ -1,6 +1,11 @@
 import React from 'react'
+import { useContext } from 'react'
+import { LanguageContext } from '../context/LanguageContext'
 
 function BlogCard({ alldata }) {
+
+    const [lang] = useContext(LanguageContext)
+
     return (
         <div className='blog-card'>
             <div className="img-container">
@@ -15,7 +20,7 @@ function BlogCard({ alldata }) {
                 <span>{alldata.author}</span>
             </div>
             <div><p>{alldata.description}</p></div>
-            <a href="#!">READ MORE</a>
+            <a href="#!">{lang === "EN" ? "Daha çox" : "Read more"}</a>
         </div>
     )
 }

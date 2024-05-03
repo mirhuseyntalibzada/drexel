@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "title": "PILLOW",
+        "title": "PREMIUM WALL LAMP",
         "price": 343,
-        "img1": "src/images/19.jpg",
-        "img2": "src/images/16.jpg",
-        "category": "sofa"
-    },
-    {
-        "id": 2,
-        "title": "CANDLE",
-        "price": 343,
-        "img1": "src/images/17-370x459.jpg",
-        "img2": "src/images/12-1-370x459.jpg",
+        "img1": "src/images/21.jpg",
+        "img2": "src/images/09.jpg",
         "category": "lighting"
     },
     {
-        "id": 3,
-        "title": "DUSTPAN & SOFTBRUSH",
+        "id": 2,
+        "title": "MODERN TABLE CLOCK",
         "price": 343,
-        "img1": "src/images/02.jpg",
-        "img2": "src/images/12-1-370x459.jpg",
+        "img1": "src/images/18.jpg",
+        "img2": "src/images/13.jpg",
+        "category": "furniture"
+    },
+    {
+        "id": 3,
+        "title": "MODERN WALL CLOCK",
+        "price": 343,
+        "img1": "src/images/07-2-370x459.jpg",
+        "img2": "src/images/13.jpg",
         "category": "furniture"
     },
     {

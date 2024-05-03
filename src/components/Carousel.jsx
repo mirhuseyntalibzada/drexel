@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Carousel({ alldata }) {
+
     return (
         <div className="carousel-card">
             <div className='img-container'>

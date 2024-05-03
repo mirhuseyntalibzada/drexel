@@ -2,30 +2,30 @@ import React from 'react'
 import ShopCard from '../components/ShopCard'
 import { useContext } from 'react'
 import { ProductContext } from '../context/ProductContext'
-import { useCart } from 'react-use-cart'
+import { LanguageContext } from '../context/LanguageContext'
 
 function Shop() {
 
-  const { addItem } = useCart()
 
   const [product] = useContext(ProductContext)
+  const [lang] = useContext(LanguageContext)
 
   return (
     <section id='shop'>
       <div className="shop-container">
         <div className="sidebar">
-          <div><span>Home / Shop</span></div>
-          <div><h2>PRODUCT CATEGORIES</h2></div>
+          <div><span>{lang==="EN"?"Ana Səhifə /  Mağaza":"Home / Shop"}</span></div>
+          <div><h2>{lang==="EN"?"MƏHSUL KATEQORİYALARI":"PRODUCT CATEGORIES"}</h2></div>
           <ul>
-            <li><a href="#!">Accessories (17)</a></li>
-            <li><a href="#!">Black Lamp (7)</a></li>
-            <li><a href="#!">Dandy Brush (3)</a></li>
-            <li><a href="#!">Funiture (4)</a></li>
-            <li><a href="#!">Light (7)</a></li>
-            <li><a href="#!">Uncategorized (0)</a></li>
+            <li><a href="#!">{lang==="EN"?"Aksesuarlar":"Accessories"} (17)</a></li>
+            <li><a href="#!">{lang==="EN"?"Qara lampa":"Black Lamp"} (7)</a></li>
+            <li><a href="#!">{lang==="EN"?"Dandy Fırçası":"Dandy Brush"} (3)</a></li>
+            <li><a href="#!">{lang==="EN"?"Mebel":"Funiture"} (4)</a></li>
+            <li><a href="#!">{lang==="EN"?"İşıq":"Light"} (7)</a></li>
+            <li><a href="#!">{lang==="EN"?"Kateqoriyasız":"Uncategorized"} (0)</a></li>
           </ul>
           <div>
-            <h4>FILTER BY SIZE</h4>
+            <h4>{lang==="EN"?"ÖLÇÜYƏ GÖRƏ FİLTİRLƏMƏ":"FILTER BY SIZE"}</h4>
             <ul>
               <li><a href="#!">L (4)</a></li>
               <li><a href="#!">XL (4)</a></li>
@@ -34,11 +34,11 @@ function Shop() {
             </ul>
           </div>
           <div>
-            <h4>FILTER BY COLOR</h4>
+            <h4>{lang==="EN"?"Şəkil":"FILTER BY COLOR"}</h4>
             <ul>
-              <li><a href="#!">Blue (4)</a></li>
-              <li><a href="#!">Green (4)</a></li>
-              <li><a href="#!">White (4)</a></li>
+              <li><a href="#!">{lang==="EN"?"Mavi":"Blue"} (4)</a></li>
+              <li><a href="#!">{lang==="EN"?"Yaşıl":"Green"} (4)</a></li>
+              <li><a href="#!">{lang==="EN"?"Ağ":"White"} (4)</a></li>
             </ul>
           </div>
         </div>

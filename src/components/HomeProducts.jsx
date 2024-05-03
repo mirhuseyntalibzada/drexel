@@ -1,9 +1,11 @@
 import ShopCard from './ShopCard'
-import { React, useContext } from 'react'
+import { React, useContext, useState } from 'react'
 import { ProductContext } from '../context/ProductContext'
-import { useState } from 'react'
+import { LanguageContext } from '../context/LanguageContext'
 
 function HomeProducts() {
+
+    const [lang] = useContext(LanguageContext)
     const [product] = useContext(ProductContext)
     const [filterData, setFilterData] = useState([])
 
@@ -17,10 +19,10 @@ function HomeProducts() {
             <div className="product-container">
                 <div className='category'>
                     <ul>
-                        <li onClick={()=>{filterProduct('furniture')}}><a href="#!">FURNITURE</a></li>
-                        <li onClick={()=>{filterProduct('lighting')}}><a href="#!">LIGHTING</a></li>
-                        <li onClick={()=>{filterProduct('sofa')}}><a href="#!">SOFAS</a></li>
-                        <li onClick={()=>{filterProduct('all')}}><a href="#!">ALL</a></li>
+                        <li onClick={()=>{filterProduct('furniture')}}><a href="#!">{lang==="EN"?"MEBEL":"FURNITURE"}</a></li>
+                        <li onClick={()=>{filterProduct('lighting')}}><a href="#!">{lang==="EN"?"İŞIQLANDIRMA":"LIGHTING"}</a></li>
+                        <li onClick={()=>{filterProduct('sofa')}}><a href="#!">{lang==="EN"?"DİVANLAR":"SOFAS"}</a></li>
+                        <li onClick={()=>{filterProduct('all')}}><a href="#!">{lang==="EN"?"HAMISI":"ALL"}</a></li>
                     </ul>
                 </div>
                 <div className='home-card-container'>
