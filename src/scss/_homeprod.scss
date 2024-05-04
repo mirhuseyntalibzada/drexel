@@ -31,7 +31,7 @@
         .home-card-container {
             width: 100%;
             display: flex;
-            overflow-x: scroll;
+            overflow-x: hidden;
 
             .shop-card {
                 flex-shrink: 0;

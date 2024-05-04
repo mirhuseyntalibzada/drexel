@@ -3,15 +3,17 @@ import ShopCard from '../components/ShopCard'
 import { useContext } from 'react'
 import { ProductContext } from '../context/ProductContext'
 import { LanguageContext } from '../context/LanguageContext'
+import { DarkContext } from '../context/DarkContext'
 
 function Shop() {
 
 
   const [product] = useContext(ProductContext)
   const [lang] = useContext(LanguageContext)
+  const [mode] = useContext(DarkContext)
 
   return (
-    <section id='shop'>
+    <section className={`${mode === "dark" ? "dark" : ""}`} id='shop'>
       <div className="shop-container">
         <div className="sidebar">
           <div><span>{lang==="EN"?"Ana Səhifə /  Mağaza":"Home / Shop"}</span></div>

@@ -8,7 +8,7 @@ function Carousel({ alldata }) {
                 <img src={alldata.img} alt="" />
             </div>
             <div className="text-container">
-                <h1>{alldata.title}</h1>
+                <h1 style={{color:"black"}}>{alldata.title}</h1>
             </div>
         </div>
     )

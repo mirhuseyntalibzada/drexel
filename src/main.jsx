@@ -5,13 +5,16 @@ import './scss/style.scss'
 import { ProductProvider } from './context/ProductContext.jsx'
 import { CartProvider } from 'react-use-cart'
 import { LanguageProvider } from './context/LanguageContext.jsx'
+import { DarkProvider } from './context/DarkContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <CartProvider>
-    <LanguageProvider>
-      <ProductProvider>
-        <App />
-      </ProductProvider>
-    </LanguageProvider>
+    <DarkProvider>
+      <LanguageProvider>
+        <ProductProvider>
+          <App />
+        </ProductProvider>
+      </LanguageProvider>
+    </DarkProvider>
   </CartProvider>
 )

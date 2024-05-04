@@ -4,16 +4,18 @@ import { ProductContext } from '../context/ProductContext'
 import { useParams } from 'react-router-dom';
 import slugify from "slugify"
 import { useCart } from 'react-use-cart';
+import { DarkContext } from '../context/DarkContext';
 
 function Details() {
 
   const [products] = useContext(ProductContext)
+  const [mode] = useContext(DarkContext)
   const { slug } = useParams();
   const productDetails = products.find(p => slugify(p.title) === slug);
   const { addItem } = useCart()
 
   return (
-    <section id='details'>
+    <section className={`${mode === "dark" ? "dark" : ""}`} id='details'>
       <div className='details-container'>
         <div className="img-container">
           <img src={`../${productDetails.img1}`} alt="" />

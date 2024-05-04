@@ -1,57 +1,69 @@
 #home {
-    max-width: 1280px;
-    margin: 0 auto;
-    overflow: hidden;
-    div {
-        &:nth-child(1) {
-            position: relative;
 
-            .carousel-container {
-                display: flex;
-                .carousel-card{
-                    flex-basis: 100%;
-                    flex-shrink: 0;
-                    position: relative;
-                    .img-container{
-                        img{
-                            width: 100%;
-                            vertical-align: middle;
+
+    .home-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        div {
+            &:nth-child(1) {
+                position: relative;
+
+                .carousel-container {
+                    display: flex;
+
+                    .carousel-card {
+                        flex-basis: 100%;
+                        flex-shrink: 0;
+                        position: relative;
+
+                        .img-container {
+                            img {
+                                width: 100%;
+                                vertical-align: middle;
+                            }
                         }
-                    }
-                    .text-container {
-                        position: absolute;
-                        top: 50%;
-                        left: 25%;
-                        transform: translate(-50%, -50%);
-                        h1{
-                            font-size: .8em;
+
+                        .text-container {
+                            position: absolute;
+                            top: 50%;
+                            left: 25%;
+                            transform: translate(-50%, -50%);
+
+                            h1 {
+                                font-size: .8em;
+                            }
                         }
                     }
                 }
-            }
 
-            .buttons {
-                position: absolute;
-                right: 15px;
-                bottom: 15px;
-                button {
-                    background-color: transparent;
-                    border: none;
+                .buttons {
+                    position: absolute;
+                    right: 15px;
+                    bottom: 15px;
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+                    }
                 }
             }
         }
     }
 }
 
-@media (min-width: 400px ) {
+@media (min-width: 400px) {
     #home {
-        div {
-            &:nth-child(1) {    
-                .carousel-container {
-                    .carousel-card{
-                        .text-container {
-                            h1{
-                                font-size: 1em;
+        .home-container {
+            div {
+                &:nth-child(1) {
+                    .carousel-container {
+                        .carousel-card {
+                            .text-container {
+                                h1 {
+                                    font-size: 1em;
+                                }
                             }
                         }
                     }
@@ -61,15 +73,17 @@
     }
 }
 
-@media (min-width: 576px ) {
+@media (min-width: 576px) {
     #home {
-        div {
-            &:nth-child(1) {    
-                .carousel-container {
-                    .carousel-card{
-                        .text-container {
-                            h1{
-                                font-size: 1.5em;
+        .home-container {
+            div {
+                &:nth-child(1) {
+                    .carousel-container {
+                        .carousel-card {
+                            .text-container {
+                                h1 {
+                                    font-size: 1.5em;
+                                }
                             }
                         }
                     }
@@ -79,15 +93,17 @@
     }
 }
 
-@media (min-width: 768px ) {
+@media (min-width: 768px) {
     #home {
-        div {
-            &:nth-child(1) {    
-                .carousel-container {
-                    .carousel-card{
-                        .text-container {
-                            h1{
-                                font-size: 2em;
+        .home-container {
+            div {
+                &:nth-child(1) {
+                    .carousel-container {
+                        .carousel-card {
+                            .text-container {
+                                h1 {
+                                    font-size: 2em;
+                                }
                             }
                         }
                     }
@@ -97,15 +113,17 @@
     }
 }
 
-@media (min-width: 1000px ) {
+@media (min-width: 1000px) {
     #home {
-        div {
-            &:nth-child(1) {    
-                .carousel-container {
-                    .carousel-card{
-                        .text-container {
-                            h1{
-                                font-size: 3em;
+        .home-container {
+            div {
+                &:nth-child(1) {
+                    .carousel-container {
+                        .carousel-card {
+                            .text-container {
+                                h1 {
+                                    font-size: 3em;
+                                }
                             }
                         }
                     }

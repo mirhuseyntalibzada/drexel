@@ -1,13 +1,15 @@
 import React from 'react'
 import { useContext } from 'react'
 import { LanguageContext } from '../context/LanguageContext'
+import { DarkContext } from '../context/DarkContext'
 
 function Footer() {
 
   const [lang] = useContext(LanguageContext)
+  const [mode] = useContext(DarkContext)
 
   return (
-    <section id='footer'>
+    <section className={`${mode === "dark" ? "dark" : ""}`} id='footer'>
       <div className='footer-container'>
         <div className='border'>
           <div className='footer-top-container'>
@@ -22,7 +24,7 @@ function Footer() {
               </ul>
             </div>
             <div className='footer-card'>
-              <h3>{lang==="EN"?"Haqqında":"CUSTOMER SERVICES"}</h3>
+              <h3>{lang==="EN"?"MÜŞTƏRİ XİDMƏTLƏRİ":"CUSTOMER SERVICES"}</h3>
               <ul>
                 <li><a href="#!">{lang==="EN"?"Əlaqə":"Contact us"}</a></li>
                 <li><a href="#!">{lang==="EN"?"Ticarət Xidmətləri":"Trade Services"}</a></li>
@@ -34,7 +36,7 @@ function Footer() {
             <div className='footer-card'>
               <h3>{lang==="EN"?"MEBEL":"FURNITURE"}</h3>
               <ul>
-                <li><a href="#!">{lang==="EN"?"Masalr":"Tables"}</a></li>
+                <li><a href="#!">{lang==="EN"?"Masalar":"Tables"}</a></li>
                 <li><a href="#!">{lang==="EN"?"Stullar":"Chairs"}</a></li>
                 <li><a href="#!">{lang==="EN"?"Saxlama Yeri":"Storage"}</a></li>
               </ul>

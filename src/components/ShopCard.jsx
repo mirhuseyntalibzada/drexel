@@ -16,7 +16,7 @@ function ShopCard({ alldata }) {
         <img className='img-2' src={alldata.img2} alt="" />
         <div className='btn-container'>
           <div className='read-more'>
-            <button><Link to={`/details/${slugify(alldata.title)}`}><i className="fa-regular fa-eye"></i></Link></button>
+            <button><Link to={`/details/${slugify(alldata.title)}`}><i style={{color:"black"}} className="fa-regular fa-eye"></i></Link></button>
           </div>
           <div className="compare">
             <button><i className="fa-solid fa-scale-balanced"></i></button>

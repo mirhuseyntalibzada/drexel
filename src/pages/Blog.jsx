@@ -2,13 +2,15 @@ import blogData from '../data/blog'
 import BlogCard from '../components/BlogCard'
 import { React, useContext } from 'react'
 import { LanguageContext } from '../context/LanguageContext'
+import { DarkContext } from '../context/DarkContext'
 
 function Blog() {
 
   const [lang] = useContext(LanguageContext)
+  const [mode] = useContext(DarkContext)
 
   return (
-    <section id='blog'>
+    <section className={`${mode === "dark" ? "dark" : ""}`} id='blog'>
       <div className='blog-container'>
         <div className='sidebar'>
           <div><span>{lang==="EN"?"Ana səhifə / Məqalə":"Home / Blog"}</span></div>
